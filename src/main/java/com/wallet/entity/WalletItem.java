@@ -5,6 +5,8 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,6 +16,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
+import com.wallet.util.enums.TypeEnum;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -39,7 +42,8 @@ public class WalletItem implements Serializable {
 	@NotNull
 	private Date date;
 	@NotNull
-	private String type;
+	@Enumerated(EnumType.STRING)
+	private TypeEnum type;
 	@NotNull
 	private String description;
 	@NotNull
@@ -49,7 +53,7 @@ public class WalletItem implements Serializable {
 		
 	}
 	
-	public WalletItem(long _id, Wallet _wallet, Date _date, String _type, String _description, BigDecimal _value) {
+	public WalletItem(long _id, Wallet _wallet, Date _date,  TypeEnum _type, String _description, BigDecimal _value) {
 		// TODO Auto-generated constructor stub
 		this.id = _id;
 		this.wallet = _wallet;
@@ -58,6 +62,7 @@ public class WalletItem implements Serializable {
 		this.description = _description;
 		this.value =_value;		
 	}
+	
 	
 	public Long getId() {
 		return id;
@@ -77,10 +82,10 @@ public class WalletItem implements Serializable {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	public String getType() {
+	public  TypeEnum getType() {
 		return type;
 	}
-	public void setType(String type) {
+	public void setType( TypeEnum type) {
 		this.type = type;
 	}
 	public String getDescription() {
