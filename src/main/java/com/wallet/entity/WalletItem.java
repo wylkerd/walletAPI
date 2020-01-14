@@ -16,6 +16,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
+import org.omg.CORBA.DynAnyPackage.Invalid;
+
 import com.wallet.util.enums.TypeEnum;
 
 import lombok.AllArgsConstructor;
@@ -53,7 +55,7 @@ public class WalletItem implements Serializable {
 		
 	}
 	
-	public WalletItem(long _id, Wallet _wallet, Date _date,  TypeEnum _type, String _description, BigDecimal _value) {
+	public WalletItem(Long _id, Wallet _wallet, Date _date,  TypeEnum _type, String _description, BigDecimal _value) {
 		// TODO Auto-generated constructor stub
 		this.id = _id;
 		this.wallet = _wallet;

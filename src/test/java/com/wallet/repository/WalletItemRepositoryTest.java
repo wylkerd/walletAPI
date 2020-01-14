@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.Optional;
 
-import org.hibernate.exception.ConstraintViolationException;
+import javax.validation.ConstraintViolationException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -49,7 +49,7 @@ public class WalletItemRepositoryTest {
 		w.setValue(BigDecimal.valueOf(250));
 		walletRepository.save(w);
 		
-		WalletItem wi = new WalletItem(4L, w, DATE, TYPE, DESCRIPTION, VALUE);
+		WalletItem wi = new WalletItem(null, w, DATE, TYPE, DESCRIPTION, VALUE);
 		repository.save(wi);
 		
 		savedWalletItemId = wi.getId();
