@@ -158,7 +158,8 @@ public class WalletItemController {
 		dto.setId(wi.getId());
 		dto.setType(wi.getType().getValue());
 		dto.setValue(wi.getValue());
-		
+		dto.setWallet(wi.getWallet().getId());
+
 		return dto;
 	}
 	

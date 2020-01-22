@@ -106,12 +106,12 @@ public class WalletItemControllerTest {
 				.contentType(MediaType.APPLICATION_JSON)
 				.accept(MediaType.APPLICATION_JSON))
 			.andExpect(status().isOk())
-			.andExpect(jsonPath("$.data.content[0].id").value(ID))
-			.andExpect(jsonPath("$.data.content[0].date").value(TODAY.format(getDateFormater())))
-			.andExpect(jsonPath("$.data.content[0].description").value(DESCRIPTION))
-			.andExpect(jsonPath("$.data.content[0].type").value(TYPE.getValue()))
-			.andExpect(jsonPath("$.data.content[0].value").value(VALUE))
-			.andExpect(jsonPath("$.data.content[0].wallet").value(ID));
+			.andExpect(jsonPath("$.data.[0].id").value(ID))
+			.andExpect(jsonPath("$.data.[0].date").value(TODAY.format(getDateFormater())))
+			.andExpect(jsonPath("$.data.[0].description").value(DESCRIPTION))
+			.andExpect(jsonPath("$.data.[0].type").value(TYPE.getValue()))
+			.andExpect(jsonPath("$.data.[0].value").value(VALUE))
+			.andExpect(jsonPath("$.data.[0].wallet").value(ID));
 		
 	}
 	
