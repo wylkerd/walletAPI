@@ -32,6 +32,8 @@ public class UserWallet implements Serializable {
 	@JoinColumn(name = "wallet",referencedColumnName = "id")
 	@ManyToOne(fetch = FetchType.LAZY)
 	private Wallet wallet;
+	
+	
 	public Long getId() {
 		return id;
 	}

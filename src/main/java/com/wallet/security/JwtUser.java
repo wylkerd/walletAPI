@@ -12,13 +12,12 @@ public class JwtUser implements UserDetails {
 	private Long id;
 	private String username;
 	private String password;
-	private Collection<? extends GrantedAuthority> authorities;
 
-	public JwtUser(Long id, String username, String password, Collection<? extends GrantedAuthority> authorities) {
-		this.id = id;
-		this.username = username;
-		this.password = password;
-		this.authorities = authorities;
+	public JwtUser(Long _id, String _username, String _password) {
+		this.id = _id;
+		this.username = _username;
+		this.password = _password;
+		
 	}
 
 	public Long getId() {
@@ -57,7 +56,9 @@ public class JwtUser implements UserDetails {
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		return authorities;
+		// TODO Auto-generated method stub
+		return null;
 	}
+
 
 }

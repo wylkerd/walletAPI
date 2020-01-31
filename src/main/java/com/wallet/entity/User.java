@@ -9,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.wallet.util.enums.RoleEnum;
 
 import lombok.Data;
 
@@ -57,11 +56,7 @@ public class User implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public RoleEnum getRole() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
+
 	
 	
 }

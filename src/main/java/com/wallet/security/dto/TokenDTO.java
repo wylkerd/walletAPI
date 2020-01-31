@@ -12,6 +12,14 @@ public class TokenDTO {
 	private String token;
 
 	public TokenDTO(String _token) {
-			this.token = _token;
+			this.setToken(_token);
 		}
+
+	public String getToken() {
+		return token;
+	}
+
+	public void setToken(String token) {
+		this.token = token;
+	}
 }

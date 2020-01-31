@@ -17,6 +17,7 @@ public class JwtAuthenticationDTO {
 	@NotNull(message = "Informe uma senha")
 	@NotEmpty(message = "Informe uma senha")
 	private String password;
+	
 	public String getEmail() {
 		return email;
 	}
