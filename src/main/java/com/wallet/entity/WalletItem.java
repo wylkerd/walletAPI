@@ -19,16 +19,16 @@ import javax.validation.constraints.NotNull;
 import org.omg.CORBA.DynAnyPackage.Invalid;
 
 import com.wallet.util.enums.TypeEnum;
-
+/*
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
+*/
 @Entity
 @Table(name = " wallet_items")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+//@Data
+//@NoArgsConstructor
+//@AllArgsConstructor
 public class WalletItem implements Serializable {
 	/**
 	 * 

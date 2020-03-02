@@ -10,9 +10,7 @@ import org.hibernate.validator.constraints.Length;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-import lombok.Data;
 
-@Data
 public class WalletItemDTO {
 
 	 private Long id;

@@ -6,9 +6,7 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
 
-import lombok.Data;
 
-@Data 
 public class WalletDTO {
 	private Long id;
 	@Length(min = 3, message = "O nome deve conter no mínimo 3 caracteres")

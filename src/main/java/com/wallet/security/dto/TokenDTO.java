@@ -1,10 +1,10 @@
 package com.wallet.security.dto;
-
+/*
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
-@AllArgsConstructor
+@AllArgsConstructor*/
 public class TokenDTO {
 
 	
